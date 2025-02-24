@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+enum ItemType {
+    BOOST
+    ATTACK
+    DEFENSE
+    SPECIAL
+}
+
+class ItemMarioKart{
+    -- atributs --
+    - name: String
+    - type: ItemType
+    - duration: Int
+    - power: Int
+    -- mètodes --
+    + constructor(name: String, type: ItemType, duration: Int, power: Int)
+    + applyEffect(): String
+}
+
+class CharacterMarioKart {
+    -- atributs --
+    - name: String
+    - speed: Float
+    - acceleration: Float
+    - weight: Float
+    - handling: Float
+    - traction: Float
+    - items: MutableList<ItemMarioKart>
+    -- mètodes --
+    + constructor(name: String)
+    + constructor(name: String, speed: Float, acceleration: Float, weight: Float, handling: Float, traction: Float, items: MutableList<ItemMarioKart>)
+    + changeWheels()
+    + brake()
+    + stopKart()
+    + turbo()
+    + accelerate()
+    + calcSpeed(time: Int)
+    + getName(): String
+    + setName(name: String)
+    + getSpeed(): Float
+    + setSpeed(speed: Float)
+    + getAcceleration(): Float
+    + setAcceleration(acceleration: Float)
+    + getWeight(): Float
+    + setWeight(weight: Float)
+
+
+}
+
+ItemMarioKart *-- ItemType
+CharacterMarioKart o-- ItemMarioKart
+
+@enduml
