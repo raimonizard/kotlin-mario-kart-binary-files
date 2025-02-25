@@ -22,6 +22,7 @@ class ItemMarioKart{
 class CharacterMarioKart {
     -- atributs --
     - name: String
+    - picture: String
     - speed: Float
     - acceleration: Float
     - weight: Float
@@ -30,7 +31,9 @@ class CharacterMarioKart {
     - items: MutableList<ItemMarioKart>
     -- mètodes --
     + constructor(name: String)
-    + constructor(name: String, speed: Float, acceleration: Float, weight: Float, handling: Float, traction: Float, items: MutableList<ItemMarioKart>)
+    + constructor(name: String, picture: String)
+    + constructor(name: String, speed: Float, acceleration: Float, weight: Float, handling: Float, traction: Float)
+    + constructor(name: String, picture: String, speed: Float, acceleration: Float, weight: Float, handling: Float, traction: Float)
     + changeWheels()
     + brake()
     + stopKart()
@@ -39,6 +42,8 @@ class CharacterMarioKart {
     + calcSpeed(time: Int)
     + getName(): String
     + setName(name: String)
+    + getPicture(): String
+    + setPicture(picture: Sring)
     + getSpeed(): Float
     + setSpeed(speed: Float)
     + getAcceleration(): Float
