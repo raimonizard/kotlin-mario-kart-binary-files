@@ -1,5 +1,5 @@
-package controllers
-import models.CharacterMarioKart
+package controller
+import model.CharacterMarioKart
 
 fun crearPersonatges(): MutableList<CharacterMarioKart> {
     val llistaPersonatges: MutableList<CharacterMarioKart> = mutableListOf()

@@ -1,6 +1,6 @@
-package models
+package model
 
-import utils.Calculadora
+import util.Calculadora
 import java.io.Serializable
 import javax.swing.ImageIcon
 
